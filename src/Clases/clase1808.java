@@ -43,7 +43,12 @@ public class clase1808 {
             catch (Exception e){}
         }
 
-       //agregar foreach
+        result = 0;
+        for (int i=0;i<numeros.size();i++){
+            result += numeros.get(i);
+            System.out.print(numeros.get(i) + " + ");
+        }
+        System.out.print(" = " + result);
 
     }
 }
