@@ -1,0 +1,34 @@
+package TpNro10;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class TpNro10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+        boolean bandera = true;
+        int numero, incognita, intentos=0;
+
+        System.out.println("Adivine un numero entre 0 y 100");
+        incognita = random.nextInt(101);
+        while (bandera){
+            System.out.print("Ingrese un numero: ");
+            numero = sc.nextInt();
+            if (numero > incognita) {
+                System.out.println("El numero es mas chico");
+                intentos++;
+            }
+            else {
+                if (numero < incognita) {
+                    System.out.println("El numero es mas grande");
+                    intentos++;
+                }
+                else
+                    bandera = false;
+            }
+        }
+        System.out.println("Correcto!");
+        System.out.println("Cantidad de intentos: "+intentos);
+    }
+}
